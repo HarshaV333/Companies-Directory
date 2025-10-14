@@ -32,7 +32,7 @@ const Home = () => {
         search ? list = list.filter(i => i.name.toLowerCase().includes(search.toLowerCase())) : list = list
 
         return list;
-        
+
     }, [data, location, industry, search]);
 
   return (
