@@ -24,11 +24,17 @@ const Home = () => {
     const filteredItems = useMemo(() => {
         let list = [...data];
 
-        location !== 'All' ? list = list.filter(i => i.location.split(',')[0] === location) : list = list
+        if(location !== 'All'){
+            list = list.filter(i => i.location.split(',')[0] === location)
+        }
 
-        industry !== 'All' ? list = list.filter(i => i.industry.split(',')[0] === industry) : list = list
+        if(industry !== 'All'){
+            list = list.filter(i => i.industry === industry)
+        }
 
-        search ? list = list.filter(i => i.name.toLowerCase().includes(search.toLowerCase())) : list = list
+        if (search){
+           list = list.filter(i => i.name.toLowerCase().includes(search.toLowerCase())); 
+        }
 
         return list;
 
