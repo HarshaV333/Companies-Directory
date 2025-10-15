@@ -2,8 +2,8 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className=' w-full text-center p-2 text-lg bg-gray-600 text-white'>
-        Companies Directory
+    <div className=' flex w-full justify-center text-4xl bg-RichBlack text-Platinum p-3 font-Montserrat font-bold'>
+        <p>Company Directories</p>
     </div>
   )
 }
